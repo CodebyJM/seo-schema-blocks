@@ -1,0 +1,15 @@
+# Node / build tooling
+node_modules/
+npm-debug.log*
+.yarn/
+.yarn-cache/
+.DS_Store
+
+# Build artifacts (optional)
+dist/
+*.log
+
+# If you want to keep built assets in Git (so the plugin is installable from GitHub),
+# DON'T ignore /build. If you prefer clean source repo, you can ignore it
+# but remember you'll need to build before zipping for wp.org.
+# build/

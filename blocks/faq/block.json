@@ -1,0 +1,33 @@
+{
+	"apiVersion": 2,
+	"name": "gsb/faq-schema",
+	"title": "SEO FAQ Schema",
+	"category": "widgets",
+	"icon": "editor-help",
+	"description": "Outputs FAQPage JSON-LD schema with visible FAQ markup.",
+	"keywords": [ "seo", "faq", "schema", "json-ld" ],
+	"textdomain": "gutenberg-seo-blocks",
+	"supports": {
+		"html": false,
+		"reusable": true
+	},
+	"attributes": {
+		"items": {
+			"type": "array",
+			"default": []
+		},
+		"accentColor": {
+			"type": "string",
+			"default": "#1d4ed8"
+		},
+		"backgroundColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"borderColor": {
+			"type": "string",
+			"default": "#e5e7eb"
+		}
+	},
+	"editorScript": "gsb-faq-editor"
+}

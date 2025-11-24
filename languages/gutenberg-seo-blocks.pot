@@ -1,0 +1,20 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Gutenberg SEO Blocks 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/gutenberg-seo-blocks\n"
+"POT-Creation-Date: 2024-01-01 00:00+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: Codex CLI\n"
+
+#: gutenberg-seo-blocks.php
+msgid "Gutenberg SEO Blocks"
+msgstr ""
+
+#: inc/admin-page.php:39
+msgid "Please include a short description of your request."
+msgstr ""

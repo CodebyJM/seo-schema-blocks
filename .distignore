@@ -1,0 +1,14 @@
+node_modules
+src
+webpack.config.js
+package.json
+package-lock.json
+.babelrc
+.eslintrc.js
+.prettierrc
+.gitignore
+README.md
+assets-src
+npm-debug.log*
+.DS_Store
+*.log
