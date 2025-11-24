@@ -40,13 +40,6 @@ Requests submitted via Settings → SEO Schema Blocks are stored locally (in the
 = Can I customize the FAQ styling? =
 Yes. In the block sidebar you can pick accent, background, and border colors. The accordion adopts those colors both in the editor and on the front end.
 
-== Screenshots ==
-1. Block inserter showing the three SEO schema blocks.
-2. Local Business block inspector controls.
-3. Rating block inspector controls.
-4. FAQ block accordion preview with styling controls.
-5. Settings page for submitting feature requests.
-
 == Changelog ==
 = 0.1.0 =
 * Initial release with Local Business, Rating, and FAQ schema blocks plus the request settings page.
