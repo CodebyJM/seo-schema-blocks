@@ -1,6 +1,6 @@
 <?php
 /**
- * Admin settings page for Gutenberg SEO Blocks.
+ * Admin settings page for SEO Schema Blocks.
  *
  * @package Gutenberg_SEO_Blocks
  */
@@ -28,7 +28,7 @@ function gsb_handle_request_submission() {
 	$message      = isset( $_POST['gsb_request_message'] ) ? wp_kses_post( wp_unslash( $_POST['gsb_request_message'] ) ) : '';
 
 	if ( empty( $message ) ) {
-		add_settings_error( 'gsb_messages', 'gsb_request_error', __( 'Please include a short description of your request.', 'gutenberg-seo-blocks' ) );
+		add_settings_error( 'gsb_messages', 'gsb_request_error', __( 'Please include a short description of your request.', 'seo-schema-blocks' ) );
 		return;
 	}
 
@@ -48,7 +48,7 @@ function gsb_handle_request_submission() {
 
 	$subject = sprintf(
 		/* translators: %s: request type */
-		__( 'New Gutenberg SEO Blocks %s request', 'gutenberg-seo-blocks' ),
+		__( 'New SEO Schema Blocks %s request', 'seo-schema-blocks' ),
 		$request_type
 	);
 
@@ -66,7 +66,7 @@ function gsb_handle_request_submission() {
 
 	wp_mail( 'codebyjm@gmail.com', $subject, $body, $headers );
 
-	add_settings_error( 'gsb_messages', 'gsb_request_saved', __( 'Thanks! Your request has been recorded.', 'gutenberg-seo-blocks' ), 'updated' );
+	add_settings_error( 'gsb_messages', 'gsb_request_saved', __( 'Thanks! Your request has been recorded.', 'seo-schema-blocks' ), 'updated' );
 }
 add_action( 'admin_init', 'gsb_handle_request_submission' );
 
@@ -75,8 +75,8 @@ add_action( 'admin_init', 'gsb_handle_request_submission' );
  */
 function gsb_register_settings_page() {
 	add_options_page(
-		__( 'Gutenberg SEO Blocks', 'gutenberg-seo-blocks' ),
-		__( 'Gutenberg SEO Blocks', 'gutenberg-seo-blocks' ),
+		__( 'SEO Schema Blocks', 'seo-schema-blocks' ),
+		__( 'SEO Schema Blocks', 'seo-schema-blocks' ),
 		'manage_options',
 		'gsb-settings',
 		'gsb_render_settings_page'
@@ -96,8 +96,8 @@ function gsb_render_settings_page() {
 	$requests = array_reverse( $requests );
 	?>
 	<div class="wrap">
-		<h1><?php esc_html_e( 'Gutenberg SEO Blocks', 'gutenberg-seo-blocks' ); ?></h1>
-		<p><?php esc_html_e( 'Share feature ideas, block requests, or feedback so we can keep improving these SEO-focused blocks.', 'gutenberg-seo-blocks' ); ?></p>
+		<h1><?php esc_html_e( 'SEO Schema Blocks', 'seo-schema-blocks' ); ?></h1>
+		<p><?php esc_html_e( 'Share feature ideas, block requests, or feedback so we can keep improving these SEO-focused blocks.', 'seo-schema-blocks' ); ?></p>
 
 		<?php settings_errors( 'gsb_messages' ); ?>
 
@@ -105,39 +105,39 @@ function gsb_render_settings_page() {
 			<?php wp_nonce_field( 'gsb_submit_request' ); ?>
 			<table class="form-table" role="presentation">
 				<tr>
-					<th scope="row"><label for="gsb_request_type"><?php esc_html_e( 'Request Type', 'gutenberg-seo-blocks' ); ?></label></th>
+					<th scope="row"><label for="gsb_request_type"><?php esc_html_e( 'Request Type', 'seo-schema-blocks' ); ?></label></th>
 					<td>
 						<select id="gsb_request_type" name="gsb_request_type">
-							<option value="feature"><?php esc_html_e( 'New block or feature idea', 'gutenberg-seo-blocks' ); ?></option>
-							<option value="support"><?php esc_html_e( 'Support question', 'gutenberg-seo-blocks' ); ?></option>
-							<option value="bug"><?php esc_html_e( 'Bug report', 'gutenberg-seo-blocks' ); ?></option>
-							<option value="other"><?php esc_html_e( 'Other feedback', 'gutenberg-seo-blocks' ); ?></option>
+							<option value="feature"><?php esc_html_e( 'New block or feature idea', 'seo-schema-blocks' ); ?></option>
+							<option value="support"><?php esc_html_e( 'Support question', 'seo-schema-blocks' ); ?></option>
+							<option value="bug"><?php esc_html_e( 'Bug report', 'seo-schema-blocks' ); ?></option>
+							<option value="other"><?php esc_html_e( 'Other feedback', 'seo-schema-blocks' ); ?></option>
 						</select>
-						<p class="description"><?php esc_html_e( 'Choose the best match so we can prioritize requests.', 'gutenberg-seo-blocks' ); ?></p>
+						<p class="description"><?php esc_html_e( 'Choose the best match so we can prioritize requests.', 'seo-schema-blocks' ); ?></p>
 					</td>
 				</tr>
 				<tr>
-					<th scope="row"><label for="gsb_request_email"><?php esc_html_e( 'Contact Email (optional)', 'gutenberg-seo-blocks' ); ?></label></th>
+					<th scope="row"><label for="gsb_request_email"><?php esc_html_e( 'Contact Email (optional)', 'seo-schema-blocks' ); ?></label></th>
 					<td>
 						<input type="email" id="gsb_request_email" name="gsb_request_email" class="regular-text" placeholder="you@example.com" />
-						<p class="description"><?php esc_html_e( 'We will only use this if we need to follow up.', 'gutenberg-seo-blocks' ); ?></p>
+						<p class="description"><?php esc_html_e( 'We will only use this if we need to follow up.', 'seo-schema-blocks' ); ?></p>
 					</td>
 				</tr>
 				<tr>
-					<th scope="row"><label for="gsb_request_message"><?php esc_html_e( 'Request Details', 'gutenberg-seo-blocks' ); ?></label></th>
+					<th scope="row"><label for="gsb_request_message"><?php esc_html_e( 'Request Details', 'seo-schema-blocks' ); ?></label></th>
 					<td>
 						<textarea id="gsb_request_message" name="gsb_request_message" rows="6" class="large-text" required></textarea>
-						<p class="description"><?php esc_html_e( 'Tell us what you need or how we can improve Gutenberg SEO Blocks.', 'gutenberg-seo-blocks' ); ?></p>
+						<p class="description"><?php esc_html_e( 'Tell us what you need or how we can improve SEO Schema Blocks.', 'seo-schema-blocks' ); ?></p>
 					</td>
 				</tr>
 			</table>
-			<?php submit_button( __( 'Submit Request', 'gutenberg-seo-blocks' ), 'primary', 'gsb_request_submit' ); ?>
+			<?php submit_button( __( 'Submit Request', 'seo-schema-blocks' ), 'primary', 'gsb_request_submit' ); ?>
 		</form>
 
 		<?php if ( ! empty( $requests ) ) : ?>
 			<hr />
-			<h2><?php esc_html_e( 'Recent Requests', 'gutenberg-seo-blocks' ); ?></h2>
-			<p class="description"><?php esc_html_e( 'These entries are stored locally so you have a record of what was submitted.', 'gutenberg-seo-blocks' ); ?></p>
+			<h2><?php esc_html_e( 'Recent Requests', 'seo-schema-blocks' ); ?></h2>
+			<p class="description"><?php esc_html_e( 'These entries are stored locally so you have a record of what was submitted.', 'seo-schema-blocks' ); ?></p>
 			<ul class="gsb-request-list">
 				<?php foreach ( $requests as $request ) : ?>
 					<li>

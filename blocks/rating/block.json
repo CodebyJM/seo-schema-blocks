@@ -6,7 +6,7 @@
 	"icon": "star-filled",
 	"description": "Outputs AggregateRating JSON-LD schema (star rating) for this page.",
 	"keywords": [ "seo", "rating", "schema", "json-ld" ],
-	"textdomain": "gutenberg-seo-blocks",
+	"textdomain": "seo-schema-blocks",
 	"supports": {
 		"html": false,
 		"reusable": true

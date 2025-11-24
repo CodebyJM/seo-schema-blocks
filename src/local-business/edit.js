@@ -37,7 +37,7 @@ const BUSINESS_TYPES = [
 	'TravelAgency',
 ];
 const businessTypeOptions = BUSINESS_TYPES.map( ( type ) => ( {
-	label: __( type, 'gutenberg-seo-blocks' ),
+	label: __( type, 'seo-schema-blocks' ),
 	value: type,
 } ) );
 
@@ -62,63 +62,63 @@ export default function Edit( { attributes, setAttributes } ) {
 	return (
 		<>
 			<InspectorControls>
-				<PanelBody title={ __( 'Business Details', 'gutenberg-seo-blocks' ) } initialOpen>
+				<PanelBody title={ __( 'Business Details', 'seo-schema-blocks' ) } initialOpen>
 					<TextControl
-						label={ __( 'Business Name', 'gutenberg-seo-blocks' ) }
+						label={ __( 'Business Name', 'seo-schema-blocks' ) }
 						value={ businessName }
 						onChange={ ( value ) => setAttributes( { businessName: value } ) }
-						help={ __( 'Schema will not output unless a name is provided.', 'gutenberg-seo-blocks' ) }
+						help={ __( 'Schema will not output unless a name is provided.', 'seo-schema-blocks' ) }
 					/>
 					<ComboboxControl
-						label={ __( 'Business Type', 'gutenberg-seo-blocks' ) }
+						label={ __( 'Business Type', 'seo-schema-blocks' ) }
 						value={ businessType }
 						options={ businessTypeOptions }
 						onChange={ ( value ) => setAttributes( { businessType: value || 'LocalBusiness' } ) }
 						allowCustomValue
-						help={ __( 'Start typing to search schema types or enter your own.', 'gutenberg-seo-blocks' ) }
+						help={ __( 'Start typing to search schema types or enter your own.', 'seo-schema-blocks' ) }
 					/>
 					<TextControl
-						label={ __( 'URL', 'gutenberg-seo-blocks' ) }
+						label={ __( 'URL', 'seo-schema-blocks' ) }
 						value={ url }
 						onChange={ ( value ) => setAttributes( { url: value } ) }
-						help={ __( 'Defaults to this page URL if empty.', 'gutenberg-seo-blocks' ) }
+						help={ __( 'Defaults to this page URL if empty.', 'seo-schema-blocks' ) }
 					/>
 					<TextControl
-						label={ __( 'Telephone', 'gutenberg-seo-blocks' ) }
+						label={ __( 'Telephone', 'seo-schema-blocks' ) }
 						value={ telephone }
 						onChange={ ( value ) => setAttributes( { telephone: value } ) }
 					/>
 					<TextControl
-						label={ __( 'Price Range', 'gutenberg-seo-blocks' ) }
+						label={ __( 'Price Range', 'seo-schema-blocks' ) }
 						value={ priceRange }
 						onChange={ ( value ) => setAttributes( { priceRange: value } ) }
 						placeholder="$$"
 					/>
 				</PanelBody>
 
-				<PanelBody title={ __( 'Address', 'gutenberg-seo-blocks' ) } initialOpen={ false }>
+				<PanelBody title={ __( 'Address', 'seo-schema-blocks' ) } initialOpen={ false }>
 					<TextControl
-						label={ __( 'Street Address', 'gutenberg-seo-blocks' ) }
+						label={ __( 'Street Address', 'seo-schema-blocks' ) }
 						value={ streetAddress }
 						onChange={ ( value ) => setAttributes( { streetAddress: value } ) }
 					/>
 					<TextControl
-						label={ __( 'City', 'gutenberg-seo-blocks' ) }
+						label={ __( 'City', 'seo-schema-blocks' ) }
 						value={ addressLocality }
 						onChange={ ( value ) => setAttributes( { addressLocality: value } ) }
 					/>
 					<TextControl
-						label={ __( 'State / Region', 'gutenberg-seo-blocks' ) }
+						label={ __( 'State / Region', 'seo-schema-blocks' ) }
 						value={ addressRegion }
 						onChange={ ( value ) => setAttributes( { addressRegion: value } ) }
 					/>
 					<TextControl
-						label={ __( 'Postal Code', 'gutenberg-seo-blocks' ) }
+						label={ __( 'Postal Code', 'seo-schema-blocks' ) }
 						value={ postalCode }
 						onChange={ ( value ) => setAttributes( { postalCode: value } ) }
 					/>
 					<TextControl
-						label={ __( 'Country Code', 'gutenberg-seo-blocks' ) }
+						label={ __( 'Country Code', 'seo-schema-blocks' ) }
 						value={ addressCountry }
 						onChange={ ( value ) => setAttributes( { addressCountry: value } ) }
 					/>
@@ -126,19 +126,19 @@ export default function Edit( { attributes, setAttributes } ) {
 			</InspectorControls>
 
 			<div { ...blockProps }>
-				<h3 className="gsb-local-business-title">{ __( 'SEO Local Business Schema', 'gutenberg-seo-blocks' ) }</h3>
+				<h3 className="gsb-local-business-title">{ __( 'SEO Local Business Schema', 'seo-schema-blocks' ) }</h3>
 
 				{ businessName ? (
 					<p>
-						{ __( 'Schema will be generated for:', 'gutenberg-seo-blocks' ) }{' '}
+						{ __( 'Schema will be generated for:', 'seo-schema-blocks' ) }{' '}
 						<strong>{ businessName }</strong>
 					</p>
 				) : (
-					<p>{ __( 'Enter a business name to generate schema.', 'gutenberg-seo-blocks' ) }</p>
+					<p>{ __( 'Enter a business name to generate schema.', 'seo-schema-blocks' ) }</p>
 				) }
 
 				<p className="gsb-local-business-note">
-					{ __( 'This block outputs JSON-LD only; nothing visual on the front end.', 'gutenberg-seo-blocks' ) }
+					{ __( 'This block outputs JSON-LD only; nothing visual on the front end.', 'seo-schema-blocks' ) }
 				</p>
 			</div>
 		</>

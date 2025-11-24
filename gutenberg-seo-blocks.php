@@ -1,10 +1,16 @@
 <?php
 /**
- * Plugin Name: Gutenberg SEO Blocks
- * Description: Gutenberg blocks for JSON-LD schema (Local Business, etc.).
- * Version: 0.1.0
- * Author: Jo Mendes
- * Text Domain: gutenberg-seo-blocks
+ * Plugin Name:           SEO Schema Blocks
+ * Plugin URI:            https://github.com/codebyjm/seo-schema-blocks
+ * Description:           SEO-focused blocks for outputting JSON-LD schema (Local Business, Rating, FAQ).
+ * Version:               0.1.0
+ * Author:                Jo Mendes
+ * Author URI:            https://codebyjm.com
+ * License:               GPL-2.0-or-later
+ * License URI:           https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain:           seo-schema-blocks
+ * Requires at least:     6.0
+ * Requires PHP:          7.4
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

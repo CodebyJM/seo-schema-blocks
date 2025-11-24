@@ -6,7 +6,7 @@
 	"icon": "editor-help",
 	"description": "Outputs FAQPage JSON-LD schema with visible FAQ markup.",
 	"keywords": [ "seo", "faq", "schema", "json-ld" ],
-	"textdomain": "gutenberg-seo-blocks",
+	"textdomain": "seo-schema-blocks",
 	"supports": {
 		"html": false,
 		"reusable": true

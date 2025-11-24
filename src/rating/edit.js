@@ -23,37 +23,37 @@ export default function Edit( { attributes, setAttributes } ) {
 	return (
 		<>
 			<InspectorControls>
-				<PanelBody title={ __( 'Rating Details', 'gutenberg-seo-blocks' ) } initialOpen>
+				<PanelBody title={ __( 'Rating Details', 'seo-schema-blocks' ) } initialOpen>
 					<TextControl
-						label={ __( 'Item Name', 'gutenberg-seo-blocks' ) }
+						label={ __( 'Item Name', 'seo-schema-blocks' ) }
 						value={ itemName }
 						onChange={ ( value ) => setAttributes( { itemName: value } ) }
 					/>
 					<TextControl
-						label={ __( 'Item URL', 'gutenberg-seo-blocks' ) }
+						label={ __( 'Item URL', 'seo-schema-blocks' ) }
 						value={ itemUrl }
 						onChange={ ( value ) => setAttributes( { itemUrl: value } ) }
-						help={ __( 'Defaults to this page URL if empty.', 'gutenberg-seo-blocks' ) }
+						help={ __( 'Defaults to this page URL if empty.', 'seo-schema-blocks' ) }
 					/>
 					<TextControl
-						label={ __( 'Rating Value', 'gutenberg-seo-blocks' ) }
+						label={ __( 'Rating Value', 'seo-schema-blocks' ) }
 						value={ ratingValue }
 						onChange={ ( value ) => setAttributes( { ratingValue: value } ) }
 						required
-						help={ __( 'Required. Example: 4.8', 'gutenberg-seo-blocks' ) }
+						help={ __( 'Required. Example: 4.8', 'seo-schema-blocks' ) }
 					/>
 					<TextControl
-						label={ __( 'Rating Count', 'gutenberg-seo-blocks' ) }
+						label={ __( 'Rating Count', 'seo-schema-blocks' ) }
 						value={ ratingCount }
 						onChange={ ( value ) => setAttributes( { ratingCount: value } ) }
 					/>
 					<TextControl
-						label={ __( 'Best Rating', 'gutenberg-seo-blocks' ) }
+						label={ __( 'Best Rating', 'seo-schema-blocks' ) }
 						value={ bestRating }
 						onChange={ ( value ) => setAttributes( { bestRating: value } ) }
 					/>
 					<TextControl
-						label={ __( 'Worst Rating', 'gutenberg-seo-blocks' ) }
+						label={ __( 'Worst Rating', 'seo-schema-blocks' ) }
 						value={ worstRating }
 						onChange={ ( value ) => setAttributes( { worstRating: value } ) }
 					/>
@@ -61,25 +61,25 @@ export default function Edit( { attributes, setAttributes } ) {
 			</InspectorControls>
 
 			<div { ...blockProps }>
-				<h3 className="gsb-rating-title">{ __( 'SEO Rating Schema', 'gutenberg-seo-blocks' ) }</h3>
+				<h3 className="gsb-rating-title">{ __( 'SEO Rating Schema', 'seo-schema-blocks' ) }</h3>
 				{ ratingValue ? (
 					<p>
-						{ __( 'Rating schema will be generated:', 'gutenberg-seo-blocks' ) }{' '}
+						{ __( 'Rating schema will be generated:', 'seo-schema-blocks' ) }{' '}
 						<strong>{ ratingValue }</strong> / { best }
 						{ ratingCount ? (
 							<span>
-								{ __( ' from ', 'gutenberg-seo-blocks' ) }
-								{ ratingCount } { __( 'ratings', 'gutenberg-seo-blocks' ) }
+								{ __( ' from ', 'seo-schema-blocks' ) }
+								{ ratingCount } { __( 'ratings', 'seo-schema-blocks' ) }
 							</span>
 						) : null }
-						{ __( ' for ', 'gutenberg-seo-blocks' ) }
-						{ itemName ? <strong>{ itemName }</strong> : __( 'this page', 'gutenberg-seo-blocks' ) }.
+						{ __( ' for ', 'seo-schema-blocks' ) }
+						{ itemName ? <strong>{ itemName }</strong> : __( 'this page', 'seo-schema-blocks' ) }.
 					</p>
 				) : (
-					<p>{ __( 'Enter at least a rating value to generate schema.', 'gutenberg-seo-blocks' ) }</p>
+					<p>{ __( 'Enter at least a rating value to generate schema.', 'seo-schema-blocks' ) }</p>
 				) }
 				<p className="gsb-rating-note">
-					{ __( 'This block outputs AggregateRating JSON-LD only; nothing visual on the front end.', 'gutenberg-seo-blocks' ) }
+					{ __( 'This block outputs AggregateRating JSON-LD only; nothing visual on the front end.', 'seo-schema-blocks' ) }
 				</p>
 			</div>
 		</>

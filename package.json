@@ -1,5 +1,5 @@
 {
-	"name": "gutenberg-seo-blocks",
+	"name": "seo-schema-blocks",
 	"version": "0.1.0",
 	"private": true,
 	"description": "Gutenberg blocks for JSON-LD schema (Local Business, etc.).",

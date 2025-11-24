@@ -6,7 +6,7 @@
 	"icon": "location-alt",
 	"description": "Outputs LocalBusiness JSON-LD schema for this page.",
 	"keywords": [ "seo", "schema", "json-ld", "local" ],
-	"textdomain": "gutenberg-seo-blocks",
+	"textdomain": "seo-schema-blocks",
 	"supports": {
 		"html": false,
 		"reusable": true

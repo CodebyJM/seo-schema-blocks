@@ -1,4 +1,4 @@
-=== Gutenberg SEO Blocks ===
+=== SEO Schema Blocks ===
 Contributors: codebyjm
 Tags: gutenberg, blocks, schema, json-ld, seo
 Requires at least: 6.3
@@ -9,7 +9,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
-Create search-friendly structured data right inside the block editor. Gutenberg SEO Blocks ships a growing suite of schema-focused blocks so editors can add Local Business, Aggregate Rating, and FAQ JSON-LD without touching code.
+Create search-friendly structured data right inside the block editor. SEO Schema Blocks ships a growing suite of schema-focused blocks so editors can add Local Business, Aggregate Rating, and FAQ JSON-LD without touching code.
 
 = Features =
 * **SEO Local Business Schema block** – Collects business details in the editor and outputs LocalBusiness JSON-LD via a render callback.
@@ -19,7 +19,7 @@ Create search-friendly structured data right inside the block editor. Gutenberg 
 * Built with block.json metadata, `@wordpress/scripts`, and WordPress coding standards so it is ready for the plugin directory.
 
 == Installation ==
-1. Upload the `gutenberg-seo-blocks` folder to the `/wp-content/plugins/` directory or install via the Plugins screen.
+1. Upload the `seo-schema-blocks` folder to the `/wp-content/plugins/` directory or install via the Plugins screen.
 2. Activate the plugin through the "Plugins" screen in WordPress.
 3. Run `npm install && npm run build` before packaging if you are building from source.
 4. Insert the SEO schema blocks from the block inserter and configure their settings. Structured data is injected automatically on the front end.
@@ -35,7 +35,7 @@ Create search-friendly structured data right inside the block editor. Gutenberg 
 The Local Business and Rating blocks only output JSON-LD `<script>` tags. The FAQ block outputs both an accessible accordion and the matching JSON-LD.
 
 = Where do feedback requests go? =
-Requests submitted via Settings → Gutenberg SEO Blocks are stored locally (in the `gsb_requests` option) and emailed to codebyjm@gmail.com for follow-up.
+Requests submitted via Settings → SEO Schema Blocks are stored locally (in the `gsb_requests` option) and emailed to codebyjm@gmail.com for follow-up.
 
 = Can I customize the FAQ styling? =
 Yes. In the block sidebar you can pick accent, background, and border colors. The accordion adopts those colors both in the editor and on the front end.
